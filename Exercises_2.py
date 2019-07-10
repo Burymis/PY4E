@@ -5,9 +5,16 @@
 name = input("What is your name:\n")
 print ("Hello "+name)
 
+
 hours = input("Enter Hours:\n")
 rate = input("Enter Rate: \n")
-pay = float(hours) * float(rate)
+
+try:
+    pay = float(hours) * float(rate)
+except:
+    print ("Please enter a number")
+# add reconies if the user niput was word or coma    
 
 print(pay)
-input("Press Enter kay to end")
+input("Press Enter to terminate")
+ 
