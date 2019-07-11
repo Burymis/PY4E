@@ -1,2 +1,5 @@
+<<<<<<< HEAD
 first change
 secund change
+=======
+>>>>>>> parent of 65ee23a... first change
