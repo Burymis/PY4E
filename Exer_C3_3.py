@@ -2,24 +2,28 @@
  # https://www.py4e.com/html3/03-conditional
  # Exercis 3:
 
-imp = input("Write Your score:\n")
-try:
-    score=float(imp)
+def grade(score):
+    try:
+        score = float(score)
 
-    if score > 1:
-        print("Bad score!")
-    elif score >= 0.9:
-        print("A")
-    elif score >= 0.8:
-        print("B")
-    elif score >= 0.7:
-        print("C")
-    elif score >= 0.6:
-        print("D")
-    else:
-        print("F")
-except:
-    print("Error, please enter numeric input")
+        if score > 1:
+            user_grade = "Bad score!"
+        elif score >= 0.9:
+            user_grade = "A"
+        elif score >= 0.8:
+            user_grade = "B"
+        elif score >= 0.7:
+            user_grade = "C"
+        elif score >= 0.6:
+            user_grade = "D"
+        else:
+            user_grade = "F"
+    except:
+        user_grade = "Bad score!"
+    return user_grade
+
+inp = input("Write Your score:\n")
+print(grade(inp))
 
 input("Press Enter to terminate")
 
