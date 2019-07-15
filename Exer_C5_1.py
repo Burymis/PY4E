@@ -2,30 +2,29 @@
  # https://www.py4e.com/html3/05-iterations
  # Exercis 1:
 
-def grade(score):
+
+count = 0
+total = 0
+
+
+
+while True:
+    imp=input("Enter a number: ")
+    if imp == "done":
+        break
+
     try:
-        score = float(score)
-
-        if score > 1:
-            user_grade = "Bad score!"
-        elif score >= 0.9:
-            user_grade = "A"
-        elif score >= 0.8:
-            user_grade = "B"
-        elif score >= 0.7:
-            user_grade = "C"
-        elif score >= 0.6:
-            user_grade = "D"
-        else:
-            user_grade = "F"
+        imp_numb=float(imp)
     except:
-        user_grade = "Bad score!"
-    return user_grade
-
-inp = input("Write Your score:\n")
-print(grade(inp))
-
-input("Press Enter to terminate")
-
+        print("Invalid input")
+        continue
+                             
+    count = count +1
+    total = total + imp_numb
+    average  = total/count
+    print("trial: ", count," Total: ", total, " average: ", average)
     
+print("End sccor: \n")
+print("Trials: ", count," Total: ", total, " Average: ", average)    
+
 
